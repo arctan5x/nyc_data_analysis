@@ -14,6 +14,7 @@ def get_file_list():
     # Get a local path of csv files
     file = open("data_urls.txt", "r") 
     file_list = [line[8:].strip() for line in file.readlines() if 'yellow' in line]
+    file_list = [line[8:].strip() for line in file.readlines() if 'green' in line]
     file.close()
     print "Found {} csv files".format(len(file_list))
     return file_list
